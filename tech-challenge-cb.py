@@ -11,6 +11,11 @@ def number_of_paths(m, n):
 
     """
 
+    if (m == 1 or n == 1):
+        return 1
+
+    return number_of_paths(m-1, n) + number_of_paths(m, n-1)
+
 
 if __name__ == '__main__':
     import doctest
